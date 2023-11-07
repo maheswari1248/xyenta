@@ -1,0 +1,23 @@
+
+<div class="container">
+    <table class="table table-dark table-striped" cellspacing="10" cellpadding="10">
+        <thead>
+          <tr>
+            <th scope="col">Countrynames</th>
+            <th scope="col">Timezones</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let e of  country">
+                <td>{{e.name.common}}</td>
+                <td>{{e.timezones[0]}}</td>
+              
+            </tr>
+             
+          
+            
+       </table> 
+      </div>

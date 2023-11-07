@@ -1,0 +1,63 @@
+ 
+
+<!-- <p *ngFor="let coun of country">
+    {{coun.idd.root}}
+</p> -->
+ <!-- <table  class="table table-dark table-striped">
+    <tr>
+      
+      <th>Country Name</th>
+      <th>Borders</th>
+      <th>Region</th>
+      <th>Currencies</th>
+      <th>FlagName</th>
+      <th></th>
+      <th>FlagImage</th>
+    </tr>
+    <tr *ngFor="let e of  country">
+      
+      <td> {{e.name?.common}}</td>
+      <td > <span *ngFor="let b of e.borders ">{{b}}</span></td>
+      <td>{{e.region}}</td>
+      <td><span *ngFor="let c of e.currencies |keyvalue">{{c.key}} </span></td>
+      <td>{{e.flag}}</td><br>
+      <td><img src="e.flags.png"></td>
+    </tr>
+  </table>
+   -->
+    <table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">CountryName</th>
+        <th scope="col">Borders</th>
+        <th scope="col">Region</th>
+        <th scope="col">Currencies</th>
+        <th scope="col">FlagName</th>
+        <th scope="col">Population</th>
+        <th scope="col">Languages</th>
+        <th scope="col">TimeZones</th>
+        <th scope="col">FlagImages</th>
+        <th scope="col">Cities</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let e of  country">
+      
+          <td> {{e.name?.common}}</td>
+          <td > <span *ngFor="let b of e.borders">{{b}}<br></span><br></td>
+          <td>{{e.region}}</td>
+          <td><span *ngFor="let c of e.currencies | keyvalue">{{c.key}} </span></td>
+          <td>{{e.flag}}</td>
+          <td>{{e.population}}</td>
+          <td><span *ngFor="let l of e.languages |  keyvalue">{{l.key}}<br></span></td>
+          <td>{{e.timezones[0]}}</td>
+          <td><img src={{e.flags.png}}></td>
+          <td>{{e.capital[0]}}</td>
+        </tr>
+         
+      
+        
+   </table> 
+   
